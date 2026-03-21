@@ -12,7 +12,7 @@ export default function Home() {
     <div className="min-h-screen bg-white text-black font-sans selection:bg-black selection:text-white">
       {/* Top Bar for Trust */}
       <div className="bg-black text-white text-[10px] tracking-[0.2em] py-2 text-center uppercase">
-        Global Trend Report 2024 | Curated Lifestyle Excellence
+        Global Trend Report 2026 | Curated Lifestyle Excellence
       </div>
 
       {/* Navigation */}
@@ -110,8 +110,8 @@ export default function Home() {
             <div>
               <h4 className="text-xs font-bold uppercase mb-6 tracking-widest">Contact</h4>
               <p className="text-sm text-gray-500 leading-relaxed">
-                General Inquiries: hello@chictrendlife.com<br/>
-                Partnerships: collab@chictrendlife.com
+                General Inquiries: admin@chictrendlife.com<br/>
+                Partnerships: admin@chictrendlife.com
               </p>
             </div>
           </div>
