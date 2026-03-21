@@ -25,7 +25,7 @@ export default function FitflopArticle() {
         <header className="max-w-4xl mx-auto px-6 pt-20 pb-16 text-center">
           <div className="flex justify-center items-center space-x-1 mb-6 text-amber-400">
             {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-current" />)}
-            <span className="text-[10px] text-gray-400 font-bold ml-2 tracking-widest uppercase">Editor's Pick 2024</span>
+            <span className="text-[10px] text-gray-400 font-bold ml-2 tracking-widest uppercase">Editor's Pick 2026</span>
           </div>
           <h1 className="text-4xl md:text-7xl font-serif leading-[1.1] mb-8">
             The Ergonomic Revolution: Why FitFlop is This Season's Essential
