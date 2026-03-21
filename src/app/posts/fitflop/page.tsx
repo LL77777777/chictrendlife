@@ -39,7 +39,7 @@ export default function FitflopArticle() {
         <div className="max-w-6xl mx-auto px-6 mb-20">
           <div className="aspect-[21/9] overflow-hidden bg-gray-100">
             <img 
-              src="https://images.unsplash.com/photo-1560343060-c147a71108d8?w=1600&q=80" 
+              src="/images/fitflop.jpg" 
               className="w-full h-full object-cover"
               alt="FitFlop Summer Collection"
             />
