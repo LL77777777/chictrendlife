@@ -9,7 +9,7 @@ const ARTICLES = [
   id: 'oliveyoung', 
   title: "Olive Young Global: The Ultimate K-Beauty Guide for Australia (Autumn 2026 Edit)", 
   category: "BEAUTY", 
-  img: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80", 
+  img: "/images/oliveyoung1.jpg", 
   desc: "From viral sunscreens to barrier-repairing serums, discover why Olive Young is Australia's favorite beauty destination this March." 
 },
 ];
