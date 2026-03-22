@@ -37,7 +37,7 @@ export default function OliveYoungArticle() {
         {/* High-Quality Brand Image */}
         <div className="max-w-6xl mx-auto px-6 mb-16">
           <img 
-            src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=1600&q=80" 
+            src="/images/oliveyoung2.jpg" 
             className="w-full h-[50vh] md:h-[70vh] object-cover rounded-sm shadow-sm"
             alt="Olive Young Skincare Routine"
           />
