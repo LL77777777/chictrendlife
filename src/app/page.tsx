@@ -1,20 +1,43 @@
 import React from 'react';
-import { ArrowRight, Instagram, Mail, ShieldCheck } from 'lucide-react';
+// 将 Instagram 替换为 Users，解决部署报错问题
+import { ArrowRight, Users, Mail, ShieldCheck } from 'lucide-react';
 
 const ARTICLES = [
-  { id: 'fitflop', title: "The Ergonomic Revolution: Why FitFlop is This Season's Essential", category: "LIFESTYLE", img: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80", desc: "Discover how comfort meets high-fashion in the latest collection..." },
-  { id: 'minimal-bags', title: "Quiet Luxury: 5 Minimalist Handbags Worth the Investment", category: "FASHION", img: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800&q=80", desc: "The rise of logo-free elegance and why it's dominating the runways..." },
-  { id: 'chic-tech', title: "Smart Home Chic: Tech Gadgets That Actually Look Good", category: "TECH", img: "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80", desc: "Modern technology designed to complement your sophisticated interior..." },
-  { id: 'oliveyoung', 
-  title: "Olive Young Global: The Ultimate K-Beauty Guide for Australia (Autumn 2026 Edit)", 
-  category: "BEAUTY", 
-  img: "/images/oliveyoung1.jpg", 
-  desc: "From viral sunscreens to barrier-repairing serums, discover why Olive Young is Australia's favorite beauty destination this March." },
-  { id: 'foreo', 
+  { 
+    id: 'foreo', 
     title: "Is The FOREO BEAR Actually A Facelift In A Box? We Tested It For 30 Days.", 
     category: "BEAUTY", 
     img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80", 
-    desc: "Discover why this microcurrent device is the talk of the 2026 Spring beauty season. We go deep into the science of lifting." },
+    desc: "Discover why this microcurrent device is the talk of the 2026 Spring beauty season. We go deep into the science of lifting." 
+  },
+  { 
+    id: 'oliveyoung', 
+    title: "Olive Young Global: The Ultimate K-Beauty Guide for Australia (Autumn 2026 Edit)", 
+    category: "BEAUTY", 
+    img: "/images/oliveyoung1.jpg", 
+    desc: "From viral sunscreens to barrier-repairing serums, discover why Olive Young is Australia's favorite beauty destination this March." 
+  },
+  { 
+    id: 'fitflop', 
+    title: "The Ergonomic Revolution: Why FitFlop is This Season's Essential", 
+    category: "LIFESTYLE", 
+    img: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80", 
+    desc: "Discover how comfort meets high-fashion in the latest collection..." 
+  },
+  { 
+    id: 'minimal-bags', 
+    title: "Quiet Luxury: 5 Minimalist Handbags Worth the Investment", 
+    category: "FASHION", 
+    img: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800&q=80", 
+    desc: "The rise of logo-free elegance and why it's dominating the runways..." 
+  },
+  { 
+    id: 'chic-tech', 
+    title: "Smart Home Chic: Tech Gadgets That Actually Look Good", 
+    category: "TECH", 
+    img: "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80", 
+    desc: "Modern technology designed to complement your sophisticated interior..." 
+  },
 ];
 
 export default function Home() {
@@ -27,7 +50,7 @@ export default function Home() {
 
       {/* Navigation */}
       <nav className="max-w-7xl mx-auto p-8 flex justify-between items-center sticky top-0 bg-white/80 backdrop-blur-md z-50">
-        <h1 className="text-2xl font-black tracking-tighter">CHIC TREND LIFE</h1>
+        <h1 className="text-2xl font-black tracking-tighter italic">CHIC TREND LIFE</h1>
         <div className="hidden md:flex space-x-10 text-[11px] font-bold uppercase tracking-widest text-gray-500">
           <a href="/" className="text-black">Home</a>
           <a href="#trends" className="hover:text-black">Trends</a>
@@ -36,7 +59,7 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* MAJOR HERO SECTION - 大气封面 */}
+      {/* MAJOR HERO SECTION */}
       <section className="relative h-[90vh] w-full overflow-hidden bg-gray-900">
         <img 
           src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600&q=80" 
@@ -61,7 +84,8 @@ export default function Home() {
             <p className="text-[11px] text-gray-500 mt-1">Hand-picked styles from global runways.</p>
           </div>
           <div className="flex flex-col items-center">
-            <Instagram className="w-6 h-6 mb-3 text-gray-400" />
+            {/* 这里使用了 Users 图标代替了 Instagram */}
+            <Users className="w-6 h-6 mb-3 text-gray-400" />
             <h4 className="text-xs font-bold uppercase tracking-widest">Global Community</h4>
             <p className="text-[11px] text-gray-500 mt-1">Join over 50k style enthusiasts.</p>
           </div>
@@ -99,12 +123,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer - Crucial for Google Ads */}
+      {/* Footer */}
       <footer className="bg-white border-t border-gray-100 pt-24 pb-12 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
             <div className="col-span-2">
-              <h3 className="text-xl font-black mb-6 tracking-tighter">CHIC TREND LIFE</h3>
+              <h3 className="text-xl font-black mb-6 tracking-tighter italic">CHIC TREND LIFE</h3>
               <p className="text-sm text-gray-400 max-w-sm leading-relaxed">
                 Dedicated to those who seek a refined lifestyle. We explore the intersection of fashion, technology, and modern living to bring you the only trends that matter.
               </p>
