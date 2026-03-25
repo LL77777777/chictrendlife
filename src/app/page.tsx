@@ -2,7 +2,6 @@ import React from 'react';
 import { ArrowRight, Instagram, Mail, ShieldCheck } from 'lucide-react';
 
 const ARTICLES = [
-  
   { id: 'fitflop', title: "The Ergonomic Revolution: Why FitFlop is This Season's Essential", category: "LIFESTYLE", img: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80", desc: "Discover how comfort meets high-fashion in the latest collection..." },
   { id: 'minimal-bags', title: "Quiet Luxury: 5 Minimalist Handbags Worth the Investment", category: "FASHION", img: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800&q=80", desc: "The rise of logo-free elegance and why it's dominating the runways..." },
   { id: 'chic-tech', title: "Smart Home Chic: Tech Gadgets That Actually Look Good", category: "TECH", img: "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80", desc: "Modern technology designed to complement your sophisticated interior..." },
