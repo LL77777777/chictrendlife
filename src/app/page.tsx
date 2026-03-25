@@ -7,7 +7,7 @@ const ARTICLES = [
     id: 'foreo', 
     title: "Is The FOREO BEAR Actually A Facelift In A Box? We Tested It For 30 Days.", 
     category: "BEAUTY", 
-    img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80", 
+    img: "/images/foreo1.jpg", 
     desc: "Discover why this microcurrent device is the talk of the 2026 Spring beauty season. We go deep into the science of lifting." 
   },
   { 
