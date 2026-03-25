@@ -43,7 +43,7 @@ export default function ForeoAdvertorial() {
           <div className="flex items-center justify-center space-x-2 text-[#B08D8D] font-sans text-sm mb-4">
             <span>By Sarah Jenkins</span>
             <span>•</span>
-            <span>March 25, {currentYear}</span>
+            <span>March 22, {currentYear}</span>
           </div>
         </header>
 
