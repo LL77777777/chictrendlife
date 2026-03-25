@@ -50,7 +50,7 @@ export default function ForeoAdvertorial() {
         {/* Hero Image */}
         <div className="px-0 relative">
           <img 
-            src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1200&q=80" 
+            src="/images/foreo2.jpg" 
             alt="Foreo Bear Facial Device" 
             className="w-full h-[500px] object-cover"
           />
