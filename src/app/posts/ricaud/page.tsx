@@ -51,7 +51,7 @@ export default function RicaudAdvertorial() {
             className="w-full h-[450px] object-cover"
           />
           <div className="bg-[#1A237E] text-white text-[10px] uppercase tracking-widest p-3 text-center">
-            Mise à jour : 22 Mars {currentYear} | Rapport Spécial Anti-Âge
+            Mise à jour : 22 février {currentYear} | Rapport Spécial Anti-Âge
           </div>
         </div>
 
