@@ -25,6 +25,13 @@ const ARTICLES = [
     desc: "Discover how comfort meets high-fashion in the latest collection..." 
   },
   { 
+  id: 'ricaud', 
+  title: "Adieu les rides : Pourquoi Dr Pierre Ricaud fait-elle trembler les cliniques ?", 
+  category: "BEAUTÉ", 
+  img: "https://images.unsplash.com/photo-1570172027912-5340624d773f?w=800&q=80", 
+  desc: "Découvrez le secret d'un lifting naturel à domicile avec l'expertise dermo-cosmétique française." 
+}
+  { 
     id: 'minimal-bags', 
     title: "Quiet Luxury: 5 Minimalist Handbags Worth the Investment", 
     category: "FASHION", 
