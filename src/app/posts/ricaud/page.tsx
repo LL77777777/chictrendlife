@@ -46,7 +46,7 @@ export default function RicaudAdvertorial() {
         {/* 主图 */}
         <div className="relative">
           <img 
-            src="https://images.unsplash.com/photo-1570172027912-5340624d773f?w=1200&q=80" 
+            src="/ricaud3.jpg" 
             alt="Dr Pierre Ricaud Soin" 
             className="w-full h-[450px] object-cover"
           />
