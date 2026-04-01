@@ -28,7 +28,7 @@ const ARTICLES = [
   id: 'ricaud', 
   title: "Adieu les rides : Pourquoi Dr Pierre Ricaud fait-elle trembler les cliniques ?", 
   category: "BEAUTÉ", 
-  img: "https://images.unsplash.com/photo-1570172027912-5340624d773f?w=800&q=80", 
+  img: "/images/ricaud3.jpg", 
   desc: "Découvrez le secret d'un lifting naturel à domicile avec l'expertise dermo-cosmétique française." 
 },
   { 
