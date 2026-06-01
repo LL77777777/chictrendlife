@@ -6,7 +6,7 @@ const ARTICLES = [
     id: 'coolife', 
     title: "Stop Overpaying for Luggage: The Indestructible Suitcase Set Under $200", 
     category: "TRAVEL", 
-    img: "https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?w=800&q=80", 
+    img: "/images/coolife1.jpg", 
     desc: "Forget the designer brands. Discover why 20,000+ travelers trust Coolife for their international adventures." 
   },
   { 
