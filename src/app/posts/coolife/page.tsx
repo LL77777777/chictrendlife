@@ -44,7 +44,7 @@ export default function CoolifeAdvertorial() {
 
         <div className="relative">
           <img 
-            src="https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?w=1200&q=80" 
+            src="/images/coolife2.jpg" 
             alt="Coolife Luggage Set" 
             className="w-full h-[500px] object-cover"
           />
