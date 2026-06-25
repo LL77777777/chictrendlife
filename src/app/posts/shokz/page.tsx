@@ -47,7 +47,7 @@ export default function ShokzOpenDotsReview() {
         {/* Hero Image - OpenDots 2 Focus */}
         <div className="mb-24 relative group">
           <img 
-            src="/images/OpenDots 2.jpg" 
+            src="https://images.unsplash.com/photo-1644662650730-22c7a315e219?w=1600&q=80" 
             alt="Shokz OpenDots 2 Revolutionary Design" 
             className="w-full h-[650px] object-cover rounded-2xl shadow-3xl grayscale-[20%] group-hover:grayscale-0 transition duration-700"
           />
