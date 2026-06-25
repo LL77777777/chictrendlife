@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowLeft, ShoppingCart, Activity, Zap, CheckCircle2, Info, ArrowRight, Award, Headphones, HeartPulse, Sparkles } from 'lucide-react';
+// 修复点：在这里的括号里加入了 ShieldAlert，并确保所有图标都已正确导入
+import { ArrowLeft, ShoppingCart, Activity, Zap, CheckCircle, Info, ArrowRight, Award, Headphones, HeartPulse, Sparkles, ShieldAlert } from 'lucide-react';
 
 export default function ShokzOpenDotsReview() {
   return (
@@ -60,20 +61,20 @@ export default function ShokzOpenDotsReview() {
 
         {/* Section 1: The OpenDots 2 Advantage */}
         <section className="prose prose-zinc lg:prose-xl mx-auto mb-24 leading-[1.9]">
-          <h2 className="text-4xl font-serif mb-8 flex items-center tracking-tight">
+          <h2 className="text-4xl font-serif mb-8 flex items-center tracking-tight text-zinc-900">
             <Zap className="mr-4 text-[#FF8C00] fill-current" /> Why OpenDots 2 is the 2026 Bestseller
           </h2>
           <p>
             The market has spoken. While traditional "buds" trap bacteria and muffle your world, the <strong>Shokz OpenDots 2</strong> has become the specific model that savvy travelers, office professionals, and light athletes are flocking to. 
           </p>
-          <p className="font-bold text-gray-900 border-l-4 border-black pl-6 my-10 bg-gray-50 py-6">
+          <p className="font-bold text-gray-900 border-l-4 border-black pl-6 my-10 bg-gray-50 py-6 italic">
             Unlike the neckband-style headphones of the past, OpenDots 2 features a "True Wireless" open-ear design. No cables, no ear-canal pressure, just pure, high-definition audio floating in the air around you.
           </p>
         </section>
 
-        {/* HEALTH & COMFORT DATA - 专门针对 OpenDots 2 的数据对比 */}
+        {/* HEALTH & COMFORT DATA */}
         <section className="my-24 bg-white border-2 border-gray-100 p-12 rounded-3xl shadow-xl">
-          <h3 className="text-2xl font-serif mb-12 text-center uppercase tracking-widest">2026 Ear Canal Pressure Test</h3>
+          <h3 className="text-2xl font-serif mb-12 text-center uppercase tracking-widest text-zinc-800">2026 Ear Canal Pressure Test</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="space-y-10">
               <div>
@@ -101,7 +102,7 @@ export default function ShokzOpenDotsReview() {
           </div>
         </section>
 
-        {/* PRIME DAY MEGA CTA - 针对 OpenDots 2 的大按钮 */}
+        {/* PRIME DAY MEGA CTA */}
         <section className="my-28 py-20 bg-zinc-900 rounded-[3rem] text-center shadow-3xl border-b-8 border-[#FF8C00]">
           <h2 className="text-white text-4xl md:text-6xl font-black mb-6 tracking-tighter uppercase">Prime Day Exclusive</h2>
           <p className="text-[#FF8C00] text-2xl font-serif italic mb-12 px-6">
@@ -117,12 +118,12 @@ export default function ShokzOpenDotsReview() {
           <p className="mt-8 text-zinc-500 text-[10px] font-bold uppercase tracking-[0.3em]">Official Amazon Global Fulfillment</p>
         </section>
 
-        {/* Section 2: Which Shokz is for you? (The Comparison) */}
+        {/* Section 2: Comparison */}
         <section className="my-24">
-          <h2 className="text-4xl font-serif mb-16 text-center italic">The 2026 Shokz Ecosystem</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="text-4xl font-serif mb-16 text-center italic text-zinc-800">The 2026 Shokz Ecosystem</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {/* OpenDots 2 - THE STAR */}
-            <div className="p-8 bg-orange-50 border-2 border-orange-200 rounded-2xl flex flex-col items-center text-center">
+            <div className="p-8 bg-orange-50 border-2 border-orange-200 rounded-2xl flex flex-col items-center">
               <Headphones className="w-12 h-12 text-[#FF8C00] mb-6" />
               <h4 className="font-black text-xl mb-4">OpenDots 2</h4>
               <p className="text-xs text-orange-700 font-bold mb-6 uppercase tracking-widest bg-orange-200 px-3 py-1 rounded-full">Bestseller</p>
@@ -131,7 +132,7 @@ export default function ShokzOpenDotsReview() {
             </div>
 
             {/* OpenRun Pro 2 */}
-            <div className="p-8 bg-zinc-50 border border-zinc-100 rounded-2xl flex flex-col items-center text-center opacity-80">
+            <div className="p-8 bg-zinc-50 border border-zinc-100 rounded-2xl flex flex-col items-center opacity-80">
               <Activity className="w-12 h-12 text-zinc-400 mb-6" />
               <h4 className="font-black text-xl mb-4 text-zinc-400">OpenRun Pro 2</h4>
               <p className="text-[10px] text-zinc-400 font-bold mb-6 uppercase tracking-widest border border-zinc-200 px-3 py-1 rounded-full">For Athletes</p>
@@ -140,7 +141,7 @@ export default function ShokzOpenDotsReview() {
             </div>
 
             {/* OpenFit Pro */}
-            <div className="p-8 bg-zinc-50 border border-zinc-100 rounded-2xl flex flex-col items-center text-center opacity-80">
+            <div className="p-8 bg-zinc-50 border border-zinc-100 rounded-2xl flex flex-col items-center opacity-80">
               <HeartPulse className="w-12 h-12 text-zinc-400 mb-6" />
               <h4 className="font-black text-xl mb-4 text-zinc-400">OpenFit Pro</h4>
               <p className="text-[10px] text-zinc-400 font-bold mb-6 uppercase tracking-widest border border-zinc-200 px-3 py-1 rounded-full">Max Comfort</p>
@@ -152,7 +153,7 @@ export default function ShokzOpenDotsReview() {
 
         {/* Section 3: Safety Analysis */}
         <section className="prose prose-zinc lg:prose-xl mx-auto mb-24 leading-[1.9]">
-          <h2 className="text-3xl font-serif mb-8 flex items-center">
+          <h2 className="text-3xl font-serif mb-8 flex items-center text-zinc-900">
             <ShieldAlert className="mr-4 text-red-500" /> Situational Awareness: The Life-Saver
           </h2>
           <p>
@@ -163,7 +164,7 @@ export default function ShokzOpenDotsReview() {
         {/* Final Conclusion */}
         <footer className="text-center py-20 border-t border-gray-100">
            <Activity className="w-16 h-16 mx-auto mb-10 text-[#FF8C00] opacity-30" />
-           <h3 className="text-4xl font-serif italic mb-10">Stop plugging your ears. Start living.</h3>
+           <h3 className="text-4xl font-serif italic mb-10 text-zinc-800">Stop plugging your ears. Start living.</h3>
            <a href="/shokz" target="_blank" className="group text-sm font-black uppercase border-b-4 border-black pb-2 hover:text-[#FF8C00] hover:border-[#FF8C00] transition-all duration-300">
              Unlock Shokz Prime Day Secret Deals <ArrowRight className="ml-2 w-5 h-5 inline-block transition-transform group-hover:translate-x-3" />
            </a>
