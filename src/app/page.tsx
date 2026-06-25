@@ -41,7 +41,7 @@ const ARTICLES = [
     id: 'shokz', 
     title: "Why Shokz is Rendering Traditional Headphones Obsolete in 2026", 
     category: "TECH", 
-    img: "https://images.unsplash.com/photo-1644662650730-22c7a315e219?w=800&q=80", 
+    img: "/images/Shokz1.jpg", 
     desc: "The peak of situational awareness. Discover why bone conduction is the new gold standard for athletes and commuters." 
   }
 ];
