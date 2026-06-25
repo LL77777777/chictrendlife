@@ -39,9 +39,9 @@ const ARTICLES = [
   },
   { 
     id: 'shokz', 
-    title: "Why Shokz is Rendering Traditional Headphones Obsolete in 2026", 
+    title: "Why Shokz OpenDots 2 is the #1 bestselling model for 2026. Forget everything you knew about earbuds.", 
     category: "TECH", 
-    img: "/images/Shokz1.jpg", 
+    img: "/images/shokz1.jpg", 
     desc: "The peak of situational awareness. Discover why bone conduction is the new gold standard for athletes and commuters." 
   }
 ];
