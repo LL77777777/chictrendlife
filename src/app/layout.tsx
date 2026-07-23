@@ -1,7 +1,7 @@
 import React from 'react';
 import './globals.css';
 
-// 这部分就是第三步提到的 Metadata，我已经帮你整合好了
+// 整合了 Impact 验证代码的 Metadata
 export const metadata = {
   title: 'Chic Trend Life | Modern Lifestyle & Trends',
   description: 'Curated trends for a modern, chic life.',
@@ -10,7 +10,14 @@ export const metadata = {
     icon: '/favicon.ico',          // 浏览器标签栏图标
     apple: '/apple-touch-icon.png', // 苹果手机保存到桌面的图标
   },
-  // 社交媒体分享时的预览图 (选填，如果你做了 og-image.jpg 建议加上)
+  // --- 添加 Impact 验证代码 ---
+  verification: {
+    other: {
+      'impact-site-verification': '3d875436-ce16-4fd1-9cf4-d6bb4a87fffa',
+    },
+  },
+  // -------------------------
+  // 社交媒体分享时的预览图
   openGraph: {
     title: 'Chic Trend Life',
     description: 'Curated trends for a modern, chic life.',
