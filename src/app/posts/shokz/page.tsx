@@ -1,10 +1,24 @@
 import React from 'react';
+import type { Metadata } from 'next';
 // 修复点：在这里的括号里加入了 ShieldAlert，并确保所有图标都已正确导入
 import { ArrowLeft, ShoppingCart, Activity, Zap, CheckCircle, Info, ArrowRight, Award, Headphones, HeartPulse, Sparkles, ShieldAlert } from 'lucide-react';
+import { ArticleStructuredData, createArticleMetadata } from '../../../lib/site';
+
+const article = {
+  slug: 'shokz',
+  title: 'Shokz OpenDots 2 Review: Open-Ear Listening for Daily Life',
+  description: 'An editorial look at the Shokz OpenDots 2 open-ear design, comfort, situational awareness, and place in the Shokz lineup.',
+  image: '/images/opendots2.jpg',
+  publishedTime: '2026-06-25T19:30:29+08:00',
+  modifiedTime: '2026-06-25T20:21:58+08:00',
+};
+
+export const metadata: Metadata = createArticleMetadata(article);
 
 export default function ShokzOpenDotsReview() {
   return (
     <div className="min-h-screen bg-[#FDFDFD] text-[#111] font-sans selection:bg-[#FF8C00] selection:text-white">
+      <ArticleStructuredData {...article} />
       {/* Prime Day 动画效果 */}
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes pulse-shokz {
@@ -111,6 +125,7 @@ export default function ShokzOpenDotsReview() {
           <a 
             href="/shokz" 
             target="_blank"
+            rel="sponsored nofollow noopener noreferrer"
             className="prime-day-btn inline-flex items-center bg-[#FF8C00] text-white px-14 py-7 rounded-full font-black text-xl uppercase tracking-widest shadow-2xl transition-all hover:bg-white hover:text-black"
           >
             Get My OpenDots 2 Discount <ShoppingCart className="ml-3 w-7 h-7" />
@@ -128,7 +143,7 @@ export default function ShokzOpenDotsReview() {
               <h4 className="font-black text-xl mb-4">OpenDots 2</h4>
               <p className="text-xs text-orange-700 font-bold mb-6 uppercase tracking-widest bg-orange-200 px-3 py-1 rounded-full">Bestseller</p>
               <p className="text-sm text-gray-600 mb-8 italic">Perfect for daily life, office, and travel. Total freedom with True Wireless design.</p>
-              <a href="/shokz" className="mt-auto text-[10px] font-black uppercase border-b-2 border-orange-500 pb-1">Shop Now</a>
+              <a href="/shokz" rel="sponsored nofollow" className="mt-auto text-[10px] font-black uppercase border-b-2 border-orange-500 pb-1">Shop Now</a>
             </div>
 
             {/* OpenRun Pro 2 */}
@@ -137,7 +152,7 @@ export default function ShokzOpenDotsReview() {
               <h4 className="font-black text-xl mb-4 text-zinc-400">OpenRun Pro 2</h4>
               <p className="text-[10px] text-zinc-400 font-bold mb-6 uppercase tracking-widest border border-zinc-200 px-3 py-1 rounded-full">For Athletes</p>
               <p className="text-sm text-gray-400 mb-8 italic">The ultimate bone conduction neckband for hardcore runners and cyclists.</p>
-              <a href="/shokz" className="mt-auto text-[10px] font-black uppercase border-b-2 border-zinc-300 pb-1 text-zinc-400">Explore</a>
+              <a href="/shokz" rel="sponsored nofollow" className="mt-auto text-[10px] font-black uppercase border-b-2 border-zinc-300 pb-1 text-zinc-400">Explore</a>
             </div>
 
             {/* OpenFit Pro */}
@@ -146,7 +161,7 @@ export default function ShokzOpenDotsReview() {
               <h4 className="font-black text-xl mb-4 text-zinc-400">OpenFit Pro</h4>
               <p className="text-[10px] text-zinc-400 font-bold mb-6 uppercase tracking-widest border border-zinc-200 px-3 py-1 rounded-full">Max Comfort</p>
               <p className="text-sm text-gray-400 mb-8 italic">Ergonomic air-conduction for those who prioritize premium sound over sport.</p>
-              <a href="/shokz" className="mt-auto text-[10px] font-black uppercase border-b-2 border-zinc-300 pb-1 text-zinc-400">Explore</a>
+              <a href="/shokz" rel="sponsored nofollow" className="mt-auto text-[10px] font-black uppercase border-b-2 border-zinc-300 pb-1 text-zinc-400">Explore</a>
             </div>
           </div>
         </section>
@@ -165,7 +180,7 @@ export default function ShokzOpenDotsReview() {
         <footer className="text-center py-20 border-t border-gray-100">
            <Activity className="w-16 h-16 mx-auto mb-10 text-[#FF8C00] opacity-30" />
            <h3 className="text-4xl font-serif italic mb-10 text-zinc-800">Stop plugging your ears. Start living.</h3>
-           <a href="/shokz" target="_blank" className="group text-sm font-black uppercase border-b-4 border-black pb-2 hover:text-[#FF8C00] hover:border-[#FF8C00] transition-all duration-300">
+           <a href="/shokz" target="_blank" rel="sponsored nofollow noopener noreferrer" className="group text-sm font-black uppercase border-b-4 border-black pb-2 hover:text-[#FF8C00] hover:border-[#FF8C00] transition-all duration-300">
              Unlock Shokz Prime Day Secret Deals <ArrowRight className="ml-2 w-5 h-5 inline-block transition-transform group-hover:translate-x-3" />
            </a>
         </footer>

@@ -1,11 +1,26 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { ArrowLeft, Star, CheckCircle, Zap, ShieldCheck, ShoppingCart } from 'lucide-react';
+import { ArticleStructuredData, createArticleMetadata } from '../../../lib/site';
+
+const article = {
+  slug: 'ricaud',
+  title: 'Avis Dr Pierre Ricaud : le soin anti-âge français en détail',
+  description: 'Un regard éditorial sur les soins anti-âge Dr Pierre Ricaud, leur positionnement, leurs caractéristiques et les offres présentées.',
+  image: '/images/ricaud3.jpg',
+  publishedTime: '2026-04-01T17:43:30+08:00',
+  modifiedTime: '2026-04-01T18:36:16+08:00',
+  locale: 'fr_FR',
+};
+
+export const metadata: Metadata = createArticleMetadata(article);
 
 export default function RicaudAdvertorial() {
   const currentYear = 2026;
 
   return (
     <div className="min-h-screen bg-[#FDFCFB] text-[#2D2D2D] font-serif selection:bg-[#E5D1B8]">
+      <ArticleStructuredData {...article} />
       {/* 按钮脉冲动画 */}
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes pulse-gold {
@@ -102,6 +117,7 @@ export default function RicaudAdvertorial() {
             <a 
               href="/ricaud" 
               target="_blank"
+              rel="sponsored nofollow noopener noreferrer"
               className="pulse-gold inline-flex items-center bg-[#C19B76] text-white px-10 py-5 rounded-sm font-bold text-sm uppercase tracking-[0.2em] shadow-2xl transition-all hover:bg-[#1A237E]"
             >
               Découvrir mon diagnostic personnalisé <Zap className="ml-2 w-4 h-4" />
@@ -133,8 +149,9 @@ export default function RicaudAdvertorial() {
           <div className="mt-16 pt-12 border-t border-[#F0EBE5] text-center">
              <h3 className="text-2xl font-serif mb-8 text-[#1A237E]">Êtes-vous prête pour votre transformation ?</h3>
              <a 
-              href="/ricaud" 
-              target="_blank"
+               href="/ricaud"
+               target="_blank"
+               rel="sponsored nofollow noopener noreferrer"
               className="inline-flex items-center bg-[#1A237E] text-white px-12 py-6 rounded-sm font-black text-sm uppercase tracking-[0.3em] shadow-2xl hover:bg-[#C19B76] transition-all"
              >
                Profiter des Offres Spéciales <ShoppingCart className="ml-3 w-5 h-5" />

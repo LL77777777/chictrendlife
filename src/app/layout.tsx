@@ -1,38 +1,96 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import './globals.css';
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '../lib/site';
 
-// 整合了 Impact 验证代码的 Metadata
-export const metadata = {
-  title: 'Chic Trend Life | Modern Lifestyle & Trends',
-  description: 'Curated trends for a modern, chic life.',
-  // 网站小图标设置
-  icons: {
-    icon: '/favicon.ico',          // 浏览器标签栏图标
-    apple: '/apple-touch-icon.png', // 苹果手机保存到桌面的图标
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
+  title: {
+    default: 'Chic Trend Life | Modern Lifestyle & Trends',
+    template: `%s | ${SITE_NAME}`,
   },
-  // --- 添加 Impact 验证代码 ---
+  description: SITE_DESCRIPTION,
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   verification: {
     other: {
       'impact-site-verification': '3d875436-ce16-4fd1-9cf4-d6bb4a87fffa',
     },
   },
-  // -------------------------
-  // 社交媒体分享时的预览图
   openGraph: {
-    title: 'Chic Trend Life',
-    description: 'Curated trends for a modern, chic life.',
-    images: '/images/hero-bg.jpg', 
+    type: 'website',
+    url: '/',
+    siteName: SITE_NAME,
+    title: 'Chic Trend Life | Modern Lifestyle & Trends',
+    description: SITE_DESCRIPTION,
+    locale: 'en_US',
+    images: [
+      {
+        url: '/images/coolife1.jpg',
+        width: 1280,
+        height: 640,
+        alt: 'Chic Trend Life editorial selection',
+      },
+    ],
   },
-}
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Chic Trend Life | Modern Lifestyle & Trends',
+    description: SITE_DESCRIPTION,
+    images: ['/images/coolife1.jpg'],
+  },
+};
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const websiteStructuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: SITE_NAME,
+        description: SITE_DESCRIPTION,
+        inLanguage: 'en',
+      },
+      {
+        '@type': 'Organization',
+        '@id': `${SITE_URL}/#organization`,
+        name: SITE_NAME,
+        url: SITE_URL,
+        logo: `${SITE_URL}/android-chrome-512x512.png`,
+        contactPoint: {
+          '@type': 'ContactPoint',
+          email: 'admin@chictrendlife.com',
+          contactType: 'customer support',
+        },
+      },
+    ],
+  };
+
   return (
     <html lang="en" className="scroll-smooth">
       <body className="antialiased font-sans bg-white text-black">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteStructuredData).replace(/</g, '\\u003c'),
+          }}
+        />
         {children}
       </body>
     </html>

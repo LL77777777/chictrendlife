@@ -1,9 +1,23 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { ArrowLeft, ShoppingBag, Star, ShieldCheck, CheckCircle } from 'lucide-react';
+import { ArticleStructuredData, createArticleMetadata } from '../../../lib/site';
+
+const article = {
+  slug: 'fitflop',
+  title: 'FitFlop Review: Where Everyday Comfort Meets Modern Style',
+  description: 'An editorial overview of FitFlop footwear, biomechanical design, cushioning, everyday comfort, and current collection highlights.',
+  image: '/images/fitflop.jpg',
+  publishedTime: '2026-03-22T02:20:17+08:00',
+  modifiedTime: '2026-03-22T03:48:43+08:00',
+};
+
+export const metadata: Metadata = createArticleMetadata(article);
 
 export default function FitflopArticle() {
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-black selection:text-white">
+      <ArticleStructuredData {...article} />
       {/* Navigation */}
       <nav className="p-6 md:p-8 max-w-7xl mx-auto flex justify-between items-center border-b border-gray-50 sticky top-0 bg-white/90 backdrop-blur-sm z-50">
         <a href="/" className="group flex items-center text-xs font-bold uppercase tracking-widest">
@@ -12,13 +26,6 @@ export default function FitflopArticle() {
         <h1 className="text-xl font-black tracking-tighter">CHIC TREND LIFE</h1>
         <div className="w-20"></div> {/* Spacer for balance */}
       </nav>
-
-      {/* Affiliate Disclosure - Crucial for Google Ads */}
-      <div className="bg-gray-50 border-b border-gray-100 py-3 px-6">
-        <p className="max-w-3xl mx-auto text-[10px] text-gray-400 text-center italic tracking-wide">
-          ADVERTISING DISCLOSURE: This article contains affiliate links. We may receive a small commission if you purchase through our links, at no extra cost to you.
-        </p>
-      </div>
 
       <article className="pb-24">
         {/* Article Header */}
@@ -50,7 +57,7 @@ export default function FitflopArticle() {
         {/* Content Body */}
         <div className="max-w-2xl mx-auto px-6">
           <p className="text-xl leading-relaxed mb-8 first-letter:text-5xl first-letter:font-serif first-letter:mr-3 first-letter:float-left">
-            In the ever-evolving world of fashion, the pendulum has finally swung back to something we've all been craving: <strong>Comfort.</strong> Leading this charge is the iconic brand <a href="/fitflop" target="_blank" className="text-black font-bold border-b-2 border-black/20 hover:border-black transition-all">FitFlop</a>, which has managed to do the impossible—marry orthopedic-level comfort with designs that wouldn't look out of place on a Parisian runway.
+            In the ever-evolving world of fashion, the pendulum has finally swung back to something we've all been craving: <strong>Comfort.</strong> Leading this charge is the iconic brand <a href="/fitflop" target="_blank" rel="sponsored nofollow noopener noreferrer" className="text-black font-bold border-b-2 border-black/20 hover:border-black transition-all">FitFlop</a>, which has managed to do the impossible—marry orthopedic-level comfort with designs that wouldn't look out of place on a Parisian runway.
           </p>
 
           <p className="mb-10 text-gray-600 leading-relaxed">
@@ -72,6 +79,7 @@ export default function FitflopArticle() {
               <a 
                 href="/fitflop" 
                 target="_blank"
+                rel="sponsored nofollow noopener noreferrer"
                 className="bg-black text-white px-12 py-5 text-[11px] font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 transition-all shadow-xl hover:-translate-y-1"
               >
                 Shop Official Collection
@@ -114,6 +122,7 @@ export default function FitflopArticle() {
             <a 
               href="/fitflop" 
               target="_blank" 
+              rel="sponsored nofollow noopener noreferrer"
               className="group inline-flex items-center text-xs font-black uppercase tracking-[0.3em] border-b-2 border-black pb-2 hover:text-gray-400 hover:border-gray-400 transition-all"
             >
               Explore the Full Season Edit <ShoppingBag className="ml-2 w-4 h-4 transition-transform group-hover:-rotate-12" />
@@ -128,6 +137,9 @@ export default function FitflopArticle() {
           <h5 className="text-[10px] font-bold uppercase tracking-[0.4em] mb-6 text-gray-400">About Chic Trend Life</h5>
           <p className="text-xs text-gray-400 leading-relaxed italic">
             CHIC TREND LIFE is a curated platform dedicated to modern living. Our editors independently research and recommend products that meet our high standards of style, function, and quality.
+          </p>
+          <p className="text-[10px] text-gray-400 leading-relaxed italic mt-6">
+            <strong>Affiliate Disclosure:</strong> This article contains affiliate links. We may receive a commission if you purchase through our links, at no extra cost to you.
           </p>
         </div>
       </footer>

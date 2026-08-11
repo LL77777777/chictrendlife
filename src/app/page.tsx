@@ -128,7 +128,7 @@ export default function Home() {
       </section>
 
       {/* Footer - Crucial for Google Ads */}
-      <footer className="bg-white border-t border-gray-100 pt-24 pb-12 px-6">
+      <footer id="about" className="bg-white border-t border-gray-100 pt-24 pb-12 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-24 text-center md:text-left">
             <div className="col-span-2">
@@ -140,15 +140,18 @@ export default function Home() {
             <div>
               <h4 className="text-xs font-bold uppercase mb-6 tracking-widest text-zinc-800">Legal</h4>
               <ul className="text-sm text-gray-400 space-y-4">
-                <li><a href="#" className="hover:text-black transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">Terms of Service</a></li>
+                <li><a href="/privacy-policy" className="hover:text-black transition-colors">Privacy Policy</a></li>
+                <li><a href="/terms" className="hover:text-black transition-colors">Terms of Use</a></li>
+                <li><a href="/affiliate-disclosure" className="hover:text-black transition-colors">Affiliate Disclosure</a></li>
+                <li><a href="/editorial-policy" className="hover:text-black transition-colors">Editorial Policy</a></li>
               </ul>
             </div>
             <div>
               <h4 className="text-xs font-bold uppercase mb-6 tracking-widest text-zinc-800">Contact</h4>
               <p className="text-sm text-gray-400 leading-relaxed italic">
-                General Inquiries: admin@chictrendlife.com<br/>
-                Partnerships: admin@chictrendlife.com
+                General Inquiries: <a href="mailto:admin@chictrendlife.com" className="hover:text-black">admin@chictrendlife.com</a><br/>
+                Partnerships: <a href="mailto:admin@chictrendlife.com?subject=Partnership%20enquiry" className="hover:text-black">admin@chictrendlife.com</a><br/>
+                <a href="/contact" className="hover:text-black">Contact page</a>
               </p>
             </div>
           </div>

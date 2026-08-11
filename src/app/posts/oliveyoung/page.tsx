@@ -1,11 +1,25 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { ArrowLeft, ShoppingBag, Truck, Star, CheckCircle2 } from 'lucide-react';
+import { ArticleStructuredData, createArticleMetadata } from '../../../lib/site';
+
+const article = {
+  slug: 'oliveyoung',
+  title: 'Olive Young Global Australia Guide: Shopping, Shipping & K-Beauty',
+  description: 'A guide for Australian shoppers covering Olive Young Global, K-beauty selections, shipping, promotions, and seasonal skincare picks.',
+  image: '/images/oliveyoung2.jpg',
+  publishedTime: '2026-03-22T20:12:08+08:00',
+  modifiedTime: '2026-03-22T20:23:41+08:00',
+};
+
+export const metadata: Metadata = createArticleMetadata(article);
 
 export default function OliveYoungArticle() {
   const currentYear = 2026;
   
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-black selection:text-white">
+      <ArticleStructuredData {...article} />
       {/* Top Nav */}
       <nav className="p-6 md:p-8 max-w-7xl mx-auto flex justify-between items-center border-b border-gray-50 sticky top-0 bg-white/90 backdrop-blur-sm z-50">
         <a href="/" className="group flex items-center text-xs font-bold uppercase tracking-widest">
@@ -14,13 +28,6 @@ export default function OliveYoungArticle() {
         <h1 className="text-xl font-black tracking-tighter italic">CHIC TREND LIFE</h1>
         <div className="w-20"></div>
       </nav>
-
-      {/* Affiliate Disclosure */}
-      <div className="bg-zinc-50 border-b border-gray-100 py-3 px-6 text-center">
-        <p className="text-[10px] text-gray-400 italic tracking-wide">
-          March 22, {currentYear} | Editorial Update: This post contains links to Olive Young Global. We may earn a commission on qualifying purchases.
-        </p>
-      </div>
 
       <article className="pb-24">
         {/* Header Section */}
@@ -64,6 +71,7 @@ export default function OliveYoungArticle() {
             <a 
               href="/oliveyoung" 
               target="_blank"
+              rel="sponsored nofollow noopener noreferrer"
               className="inline-flex items-center bg-green-600 text-white px-10 py-4 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-green-700 transition-all shadow-lg"
             >
               Shop the Collection <ShoppingBag className="ml-2 w-4 h-4" />
@@ -98,6 +106,7 @@ export default function OliveYoungArticle() {
             <a 
               href="/oliveyoung" 
               target="_blank"
+              rel="sponsored nofollow noopener noreferrer"
               className="inline-block border-2 border-white px-8 py-3 text-xs font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all"
             >
               View Olive Young Rankings
@@ -122,6 +131,7 @@ export default function OliveYoungArticle() {
             <a 
               href="/oliveyoung" 
               target="_blank" 
+              rel="sponsored nofollow noopener noreferrer"
               className="group text-sm font-black uppercase border-b-4 border-black pb-2 hover:text-zinc-500 hover:border-zinc-300 transition-all"
             >
               Enter the Olive Young Global Store <ShoppingBag className="ml-2 w-5 h-5 inline-block transition-transform group-hover:-translate-y-1" />
@@ -134,7 +144,7 @@ export default function OliveYoungArticle() {
       <footer className="py-20 bg-white border-t border-zinc-100 text-center px-6">
         <p className="text-[11px] text-gray-400 uppercase tracking-widest mb-4">© {currentYear} CHIC TREND LIFE | BEAUTY EDITORIAL</p>
         <p className="max-w-md mx-auto text-[10px] text-gray-300 leading-relaxed">
-          Our reviews are independent. Some products featured here are from our partners who compensate us. This helps keep our trend reports free for our Australian readers.
+          <strong>Affiliate Disclosure:</strong> This article contains affiliate links to Olive Young Global. We may earn a commission on qualifying purchases at no extra cost to you. This helps keep our trend reports free for our Australian readers.
         </p>
       </footer>
     </div>

@@ -1,11 +1,25 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { ArrowLeft, Star, Check, Zap, ShoppingCart, ShieldCheck } from 'lucide-react';
+import { ArticleStructuredData, createArticleMetadata } from '../../../lib/site';
+
+const article = {
+  slug: 'foreo',
+  title: 'FOREO BEAR Review: A 30-Day Look at At-Home Microcurrent',
+  description: 'An editorial review of the FOREO BEAR microcurrent device, its features, routine, and the experience described after 30 days.',
+  image: '/images/foreo2.jpg',
+  publishedTime: '2026-03-25T21:15:37+08:00',
+  modifiedTime: '2026-03-25T22:03:51+08:00',
+};
+
+export const metadata: Metadata = createArticleMetadata(article);
 
 export default function ForeoAdvertorial() {
   const currentYear = 2026;
 
   return (
     <div className="min-h-screen bg-[#FFF9F9] text-[#333] font-serif selection:bg-[#FADADD]">
+      <ArticleStructuredData {...article} />
       {/* Custom Styles for Pulse Animation */}
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes custom-pulse {
@@ -78,6 +92,7 @@ export default function ForeoAdvertorial() {
             <a 
               href="/foreo" 
               target="_blank"
+              rel="sponsored nofollow noopener noreferrer"
               className="pulse-button inline-flex items-center bg-[#B08D8D] text-white px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest shadow-xl transition-transform hover:scale-105"
             >
               Check Availability & Secret Spring Discounts <Zap className="ml-2 w-4 h-4" />
@@ -136,6 +151,7 @@ export default function ForeoAdvertorial() {
             <a 
               href="/foreo" 
               target="_blank"
+              rel="sponsored nofollow noopener noreferrer"
               className="pulse-button inline-flex items-center bg-[#B08D8D] text-white px-12 py-6 rounded-full font-bold text-sm uppercase tracking-[0.2em] shadow-2xl transition-all hover:bg-[#A07C7C]"
             >
               Shop The Exclusive Bundle Now <ShoppingCart className="ml-2 w-5 h-5" />
@@ -158,8 +174,9 @@ export default function ForeoAdvertorial() {
           <div className="mt-20 pt-16 border-t border-[#FEE2E2] text-center">
              <h4 className="text-xl font-serif mb-8 italic">Ready for your own 'Facelift in a Box'?</h4>
              <a 
-              href="/foreo" 
-              target="_blank"
+               href="/foreo"
+               target="_blank"
+               rel="sponsored nofollow noopener noreferrer"
               className="inline-block text-[#B08D8D] font-black uppercase tracking-[0.3em] border-b-2 border-[#B08D8D] pb-2 hover:text-[#4A4A4A] hover:border-[#4A4A4A] transition-all text-sm"
              >
                Click Here To Unlock Exclusive Discounts →

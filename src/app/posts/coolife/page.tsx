@@ -1,11 +1,25 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { ArrowLeft, Star, ShieldCheck, Plane, Globe, ShoppingCart, CheckCircle2, ArrowRight, Award, Box, Scale } from 'lucide-react';
+import { ArticleStructuredData, createArticleMetadata } from '../../../lib/site';
+
+const article = {
+  slug: 'coolife',
+  title: 'Coolife Luggage Review: Is the 3-Piece Set Worth It?',
+  description: 'A detailed look at Coolife luggage, including materials, organization, wheels, value, and who the 3-piece set may suit.',
+  image: '/images/coolife2.jpg',
+  publishedTime: '2026-06-02T01:46:58+08:00',
+  modifiedTime: '2026-06-02T02:45:53+08:00',
+};
+
+export const metadata: Metadata = createArticleMetadata(article);
 
 export default function CoolifeDeepReview() {
   const currentYear = 2026;
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-blue-100">
+      <ArticleStructuredData {...article} />
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes travel-pulse {
           0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
@@ -100,6 +114,7 @@ export default function CoolifeDeepReview() {
             <a 
               href="/coolife" 
               target="_blank"
+              rel="sponsored nofollow noopener noreferrer"
               className="pulse-blue inline-flex items-center bg-blue-600 text-white px-12 py-5 rounded-sm font-bold text-sm uppercase tracking-[0.2em] transition-all hover:bg-slate-900 shadow-xl"
             >
               Check Price on Amazon Now <ShoppingCart className="ml-3 w-5 h-5" />
@@ -171,7 +186,7 @@ export default function CoolifeDeepReview() {
             <p className="text-slate-400 mb-10 leading-relaxed">
               After putting this set through the ringer, my conclusion is simple: Luggage is a tool, not a trophy. <strong>Coolife</strong> provides 95% of the performance of luxury brands at 20% of the cost. In 2026, that's not just a good deal—it's the only way to travel.
             </p>
-            <a href="/coolife" target="_blank" className="inline-block bg-white text-black px-12 py-5 text-xs font-bold uppercase tracking-[0.3em] hover:bg-blue-500 hover:text-white transition-all">
+            <a href="/coolife" target="_blank" rel="sponsored nofollow noopener noreferrer" className="inline-block bg-white text-black px-12 py-5 text-xs font-bold uppercase tracking-[0.3em] hover:bg-blue-500 hover:text-white transition-all">
               Shop the Collection on Amazon
             </a>
           </div>
