@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import { ArticleStructuredData, createArticleMetadata } from '../../../lib/site';
 
-const AFFILIATE_URL = 'https://lvnta.com/lv_WKY63BmB04ukAZmLV3';
+const AFFILIATE_URL = '/auraglow';
 
 const article = {
   slug: 'best-at-home-teeth-whitening-kits',

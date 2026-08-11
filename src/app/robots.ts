@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/coolife', '/fitflop', '/foreo', '/oliveyoung', '/ricaud', '/shokz'],
+      disallow: ['/auraglow', '/coolife', '/fitflop', '/foreo', '/oliveyoung', '/ricaud', '/shokz'],
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
     host: SITE_URL,
