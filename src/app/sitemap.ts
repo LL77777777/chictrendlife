@@ -5,6 +5,7 @@ export const dynamic = 'force-static';
 
 const pages = [
   { path: '', changeFrequency: 'weekly' as const, priority: 1 },
+  { path: '/posts/best-at-home-teeth-whitening-kits', changeFrequency: 'monthly' as const, priority: 0.9 },
   { path: '/posts/coolife', changeFrequency: 'monthly' as const, priority: 0.7 },
   { path: '/posts/fitflop', changeFrequency: 'monthly' as const, priority: 0.7 },
   { path: '/posts/foreo', changeFrequency: 'monthly' as const, priority: 0.7 },

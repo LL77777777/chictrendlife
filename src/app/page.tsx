@@ -2,6 +2,13 @@ import React from 'react';
 import { ArrowRight, Users, Mail, ShieldCheck } from 'lucide-react';
 
 const ARTICLES = [
+  {
+    id: 'best-at-home-teeth-whitening-kits',
+    title: 'Best At Home Teeth Whitening Kits: Where AuraGlow Fits',
+    category: 'ORAL CARE',
+    img: '/images/auraglow-kit.jpg',
+    desc: 'An evidence-led look at peroxide, LED trays, sensitivity, value, and whether the AuraGlow kit earns a place in your routine.'
+  },
   { 
     id: 'coolife', 
     title: "Stop Overpaying for Luggage: The Indestructible Suitcase Set Under $200", 

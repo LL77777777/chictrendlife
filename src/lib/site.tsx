@@ -8,6 +8,7 @@ export const SITE_DESCRIPTION =
 type ArticleMetadataInput = {
   slug: string;
   title: string;
+  absoluteTitle?: boolean;
   description: string;
   image: string;
   publishedTime: string;
@@ -18,6 +19,7 @@ type ArticleMetadataInput = {
 export function createArticleMetadata({
   slug,
   title,
+  absoluteTitle = false,
   description,
   image,
   publishedTime,
@@ -27,7 +29,7 @@ export function createArticleMetadata({
   const path = `/posts/${slug}`;
 
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description,
     alternates: {
       canonical: path,
