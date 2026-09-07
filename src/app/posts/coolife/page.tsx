@@ -189,6 +189,12 @@ export default function CoolifeDeepReview() {
             <a href="/coolife" target="_blank" rel="sponsored nofollow noopener noreferrer" className="inline-block bg-white text-black px-12 py-5 text-xs font-bold uppercase tracking-[0.3em] hover:bg-blue-500 hover:text-white transition-all">
               Shop the Collection on Amazon
             </a>
+            <p className="mt-8 text-sm text-slate-300">
+              Prefer a more detailed size-by-size breakdown? Read our updated{' '}
+              <a href="/posts/best-3-piece-luggage-set" className="font-bold text-white underline underline-offset-4">
+                guide to the best 3 piece luggage set
+              </a>.
+            </p>
           </div>
         </div>
       </main>

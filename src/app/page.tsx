@@ -3,6 +3,13 @@ import { ArrowRight, Users, Mail, ShieldCheck } from 'lucide-react';
 
 const ARTICLES = [
   {
+    id: 'best-3-piece-luggage-set',
+    title: 'Best 3 Piece Luggage Set? A Practical Coolife Review',
+    category: 'TRAVEL',
+    img: '/images/coolife-3-piece-apple-green.jpg',
+    desc: 'A clear-eyed look at Coolife’s 20, 24 and 28-inch hardshell cases, including the useful features and the tradeoffs to know.'
+  },
+  {
     id: 'best-at-home-teeth-whitening-kits',
     title: 'Best At Home Teeth Whitening Kits: Where AuraGlow Fits',
     category: 'ORAL CARE',
