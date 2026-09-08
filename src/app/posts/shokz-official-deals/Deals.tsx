@@ -6,9 +6,27 @@ import { Deal, dealStatus, shokzDeals, updated } from '../../../data/shokz-deals
 const rel = 'sponsored nofollow noopener noreferrer';
 const money = (value: number) => `$${value.toFixed(2)}`;
 const displayDate = (date: string) => new Date(`${date}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
-function CopyCode({ code }: { code: string }) {
+function CopyCode({ code, path }: { code: string; path: string }) {
   const [message, setMessage] = useState('Copy code');
-  return <div className="flex flex-wrap items-center gap-3"><code className="select-all rounded-lg border border-dashed border-orange-300 bg-white px-4 py-3 text-lg font-bold tracking-wider text-zinc-950">{code}</code><button type="button" onClick={async () => { try { await navigator.clipboard.writeText(code); setMessage('Copied!'); } catch { setMessage('Select the code to copy'); } }} className="rounded-lg border border-orange-300 px-4 py-3 text-sm font-semibold hover:bg-orange-100">Copy</button><span role="status" className="text-xs">{message}</span></div>;
+  const copy = () => {
+    if (!navigator.clipboard) { setMessage('Select the code to copy'); return; }
+    void navigator.clipboard.writeText(code).then(
+      () => setMessage('Copied!'),
+      () => setMessage('Select the code to copy'),
+    );
+  };
+  const openOffer = () => {
+    copy();
+    window.open(path, '_blank', 'noopener,noreferrer');
+  };
+  return <div>
+    <div className="flex flex-wrap items-center gap-3">
+      <button type="button" onDoubleClick={openOffer} onKeyDown={event => { if (event.key === 'Enter') { event.preventDefault(); openOffer(); } }} aria-label={`Double-click ${code} to copy and open the Amazon offer; press Enter with a keyboard`} className="select-all rounded-lg border border-dashed border-orange-300 bg-white px-4 py-3 text-lg font-bold tracking-wider text-zinc-950"><code>{code}</code></button>
+      <a href={path} target="_blank" rel={rel} onClick={copy} className="rounded-lg border border-orange-300 px-4 py-3 text-sm font-semibold hover:bg-orange-100">Copy &amp; shop ↗</a>
+      <span role="status" className="text-xs">{message}</span>
+    </div>
+    <p className="mt-2 text-xs text-zinc-500">Double-click the code or choose Copy &amp; shop to open Amazon.</p>
+  </div>;
 }
 function Card({ deal, expired = false }: { deal: Deal; expired?: boolean }) {
   return <section className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
@@ -29,7 +47,31 @@ export default function Deals() {
   const expired = shokzDeals.filter(d => dealStatus(d, date) === 'expired');
   const max = Math.max(0, ...active.map(d => d.discount));
   return <>
-    {pinned.map(deal => <aside key={deal.id} className="mb-9 rounded-2xl border border-orange-200 bg-orange-50 p-5 sm:p-7"><div className="flex flex-wrap items-start justify-between gap-5"><div><p className="text-[11px] font-bold uppercase tracking-[0.18em] text-orange-800">Pinned · Ongoing offer</p><h2 className="mt-2 text-xl font-semibold">{deal.name}: {deal.discount}% OFF</h2><p className="mt-2 mb-4 text-sm text-zinc-600">No end date announced</p><CopyCode code={deal.code!}/></div><a href={deal.path} target="_blank" rel={rel} className="rounded-lg bg-zinc-950 px-5 py-3 text-sm font-semibold text-white hover:bg-orange-700">Shop OpenDots 2 on Amazon ↗</a></div><p className="mt-4 text-xs text-zinc-500">Enter the code at checkout for eligible OpenDots 2 purchases. Other models are not included in this code offer.</p></aside>)}
+    {pinned.map(deal => <aside key={deal.id} className="mb-9 rounded-2xl border border-orange-200 bg-orange-50 p-5 sm:p-7">
+      <div className="grid items-center gap-7 lg:grid-cols-2">
+        <div>
+          <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-orange-800">Pinned · Ongoing offer</p>
+          <h2 className="mt-2 text-xl font-semibold">{deal.name}: {deal.discount}% OFF</h2>
+          <p className="mt-2 mb-4 text-sm text-zinc-600">No end date announced</p>
+          <CopyCode code={deal.code!} path={deal.path}/>
+          <a href={deal.path} target="_blank" rel={rel} className="mt-5 inline-block rounded-lg bg-zinc-950 px-5 py-3 text-sm font-semibold text-white hover:bg-orange-700">Shop OpenDots 2 on Amazon ↗</a>
+        </div>
+        <div>
+          <div className="grid grid-cols-3 gap-3">
+            {[
+              { slug: 'pearl-white', name: 'Pearl White' },
+              { slug: 'grey', name: 'Grey' },
+              { slug: 'black', name: 'Black' },
+            ].map(color => <a key={color.slug} href={deal.path} target="_blank" rel={rel} aria-label={`Shop OpenDots 2 — ${color.name} on Amazon`} className="rounded-xl border border-orange-100 bg-white p-2 text-center transition hover:border-orange-400 hover:shadow-sm">
+              <img src={`/images/shokz-opendots2-${color.slug}.webp`} alt={`Shokz OpenDots 2 earbuds in ${color.name}`} width="480" height="480" className="aspect-square w-full object-contain"/>
+              <span className="mt-2 block text-xs font-medium text-zinc-600">{color.name}</span>
+            </a>)}
+          </div>
+          <p className="mt-3 text-center text-xs text-zinc-500">Choose your color on Amazon. Availability may vary.</p>
+        </div>
+      </div>
+      <p className="mt-4 text-xs text-zinc-500">Enter the code at checkout for eligible OpenDots 2 purchases. Other models are not included in this code offer.</p>
+    </aside>)}
     <header className="mb-8"><p className="text-xs font-semibold uppercase tracking-widest text-orange-700">Shokz Official offers · US</p><h1 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">Shokz US Daily Deals{max ? ` — Up to ${max}% OFF!` : ' & Promo Codes'}</h1><p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-600">The latest Shokz offers shared with Chic Trend Life, collected in one place. Pick your model, check the dates, then follow its link to Amazon US. New promotions will appear here as they are added.</p><p className="mt-3 text-xs text-zinc-500">Amazon US · Prices in USD</p></header>
     <div className="mb-5 flex items-center justify-between"><h2 className="text-lg font-semibold">Limited-time offers</h2><span className="text-xs text-zinc-500">{limited.length} listed offers</span></div>
     {limited.length ? <div className="grid gap-5 md:grid-cols-3">{limited.map(deal => <Card key={deal.id} deal={deal}/>)}</div> : <p className="rounded-xl border border-zinc-200 bg-white p-6 text-sm text-zinc-600">No limited-time offers are currently listed. Check above for ongoing codes.</p>}
