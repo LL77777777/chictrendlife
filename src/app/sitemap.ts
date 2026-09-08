@@ -4,6 +4,7 @@ import { SITE_URL } from '../lib/site';
 export const dynamic = 'force-static';
 
 const pages = [
+  { path: '/posts/shokz-official-deals', changeFrequency: 'daily' as const, priority: 0.9 },
   { path: '', changeFrequency: 'weekly' as const, priority: 1 },
   { path: '/posts/best-at-home-teeth-whitening-kits', changeFrequency: 'monthly' as const, priority: 0.9 },
   { path: '/posts/best-3-piece-luggage-set', changeFrequency: 'monthly' as const, priority: 0.9 },

@@ -42,6 +42,7 @@ export default function ShokzOpenDotsReview() {
       </nav>
 
       <main className="max-w-4xl mx-auto py-12 px-6">
+        <a href="/posts/shokz-official-deals" className="mb-6 block rounded-xl border border-orange-200 bg-orange-50 p-5 text-sm font-semibold text-orange-900">Looking for a promotion? Browse Shokz US deals and promo codes →</a>
         {/* Prime Day Flash Alert */}
         <div className="bg-[#FF8C00] text-white p-4 rounded-t-2xl text-center font-black text-sm tracking-[0.2em] uppercase shadow-lg">
           🔥 Amazon Prime Day 2026: June 23 – June 26 | Huge Savings on OpenDots 2

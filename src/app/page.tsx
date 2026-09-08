@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, Users, Mail, ShieldCheck } from 'lucide-react';
 
 const ARTICLES = [
+  { id: 'shokz-official-deals', title: 'Shokz US Daily Deals & Promo Codes', category: 'DEALS', img: '/images/shokz-openrun-pro-blue.png', desc: 'Current Amazon US offers, eligible colors and a pinned OpenDots 2 promo code. Check the dates before you shop.' },
   {
     id: 'best-3-piece-luggage-set',
     title: 'Best 3 Piece Luggage Set? A Practical Coolife Review',
