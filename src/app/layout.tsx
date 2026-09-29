@@ -25,7 +25,6 @@ export const metadata: Metadata = {
   verification: {
     other: {
       'impact-site-verification': '3d875436-ce16-4fd1-9cf4-d6bb4a87fffa',
-      'fo-verify': '02dc01246faccb7f5b3cad5016dd5000',
     },
   },
   openGraph: {
